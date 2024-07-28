@@ -1,3 +1,4 @@
+/* General styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,15 +6,41 @@ body, html {
     scroll-behavior: smooth;
 }
 
-.navbar {
+/* Header and navbar styles */
+.header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    color: white;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    background: linear-gradient(90deg, #8e44ad, #9b59b6);
+    color: white;
+    padding: 10px 0;
     transition: background 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em; /* Adjust as needed */
+    color: white;
 }
 
 .nav-list {
@@ -21,36 +48,36 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 .nav-item {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-item a {
     text-decoration: none;
     color: white;
-    padding: 15px;
+    padding: 10px 15px;
     display: block;
-    transition: color 0.3s, background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-item a:hover {
-    background-color: #ff7e5f;
-    color: #fff;
+.nav-item a:hover, .btn-order:hover {
+    background-color: #fff;
+    color: #8e44ad;
     border-radius: 5px;
 }
 
+.btn-order {
+    background: #8e44ad;
+    border-radius: 5px;
+}
+
+/* Section styles */
 .section {
-    height: 100vh;
-    padding: 100px 50px 50px 50px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 60px 20px;
     text-align: center;
+    margin-top: 70px; /* Add margin to account for fixed header */
 }
 
 .section h1 {
@@ -64,18 +91,155 @@ body, html {
     color: #666;
 }
 
-.section ul {
-    list-style: none;
-    padding: 0;
+.additional-content {
+    margin-top: 30px;
 }
 
-.section ul li {
-    font-size: 1.2em;
+.additional-content h2 {
+    font-size: 2em;
+    color: #8e44ad;
+}
+
+.additional-content p, .about-content p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.additional-content ul, .about-content ul {
+    list-style: disc;
+    margin: 20px 0 0 20px;
+    text-align: left;
+}
+
+.additional-content li, .about-content li {
+    margin-bottom: 10px;
+}
+
+/* About Us section */
+.about-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    color: #8e44ad;
+}
+
+.about-content ul {
+    margin-left: 20px;
+}
+
+/* Menu section styles */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-item h2 {
+    margin-top: 15px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 1em;
     color: #666;
-    margin: 10px 0;
 }
 
-#home { background-color: #f7e8e1; }
-#about { background-color: #d9e9f1; }
-#services { background-color: #e2f0cb; }
-#contact { background-color: #f5d5e3; }
+/* Footer styles */
+.footer {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    background: #8e44ad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #9b59b6;
+}
+
+/* Order page styles */
+.order {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.order h1 {
+    font-size: 2em;
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form label {
+    display: block;
+    font-size: 1em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.order-form input, .order-form textarea, .order-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.order-form .btn-submit {
+    background: #8e44ad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-form .btn-submit:hover {
+    background: #9b59b6;
+}

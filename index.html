@@ -3,47 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Navigation Menu</title>
+    <title>Online Food Delivery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><a href="#services">Services</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="Taste Tribe Logo" class="logo-img">
+                <h1>Taste Tribe</h1>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#menu">Menu</a></li>
+                <li class="nav-item"><a href="#about">About Us</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+                <li class="nav-item"><a href="#order" class="btn-order">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="home" class="section">
-        <h1>Welcome to Our Website</h1>
-        <p>Explore our features and offerings. We are dedicated to providing the best service and value to our customers. Stay tuned for the latest updates and news.</p>
-        <p>Our website offers a variety of tools and resources to help you make the most of our services. From detailed tutorials to comprehensive guides, we have everything you need to succeed.</p>
-    </div>
-    <div id="about" class="section">
+    <section id="home" class="section home">
+        <div class="content">
+            <h1>Welcome to Taste Tribe</h1>
+            <p>Your favorite meals delivered fast at your door.</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+        <div class="additional-content">
+            <h2>Why Choose Us?</h2>
+            <p>At Taste Tribe, we believe in providing quality food at your convenience. Here are some reasons why you should choose us:</p>
+            <ul>
+                <li>Fast Delivery: Get your food delivered quickly and efficiently.</li>
+                <li>Wide Variety: Choose from a diverse menu of delicious dishes.</li>
+                <li>Fresh Ingredients: We use only the freshest ingredients for our meals.</li>
+                <li>Customer Satisfaction: Our customers are our top priority. We strive to provide the best service possible.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu">
+        <h1>Our Menu</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="image1.jpg" alt="Masala Dosa">
+                <h2>Masala Dosa</h2>
+                <p>Price: $8.99</p>
+                <p>A crispy South Indian crepe filled with spiced potato mixture, served with coconut chutney and sambar.</p>
+            </div>
+            <div class="menu-item">
+                <img src="image2.jpg" alt="Chole Bhature">
+                <h2>Chole Bhature</h2>
+                <p>Price: $10.99</p>
+                <p>A hearty North Indian dish of spicy chickpea curry served with fluffy, deep-fried bread.</p>
+            </div>
+            <div class="menu-item">
+                <img src="image3.jpg" alt="Veg Biryani">
+                <h2>Veg Biryani</h2>
+                <p>Price: $12.99</p>
+                <p>A fragrant rice dish layered with mixed vegetables and paneer, infused with aromatic spices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
         <h1>About Us</h1>
-        <p>Learn more about our mission and values. We are committed to excellence and strive to exceed our customers' expectations. Our team is passionate about delivering quality and innovation in everything we do.</p>
-        <p>Founded in 2020, our company has quickly grown to become a leader in the industry. Our success is built on a foundation of trust, integrity, and a relentless pursuit of perfection.</p>
-    </div>
-    <div id="services" class="section">
-        <h1>Our Services</h1>
-        <p>Discover what we can do for you. We offer a wide range of services designed to meet the needs of our diverse client base. From consulting to implementation, we have the expertise to help you achieve your goals.</p>
-        <p>Our services include:</p>
-        <ul>
-            <li>Custom Software Development</li>
-            <li>IT Consulting</li>
-            <li>Project Management</li>
-            <li>Technical Support</li>
-        </ul>
-    </div>
-    <div id="contact" class="section">
+        <div class="about-content">
+            <p>Taste Tribe is committed to delivering your favorite meals quickly and efficiently. Our team works around the clock to ensure that your orders are prepared with care and delivered on time.</p>
+            <h2>Our Story</h2>
+            <p>Founded in 2020, Taste Tribe started with a simple mission: to bring delicious, home-cooked meals to everyone's doorstep. Our founders, passionate food enthusiasts, wanted to make high-quality food accessible to everyone, regardless of their busy schedules.</p>
+            <h2>Our Values</h2>
+            <ul>
+                <li>Quality: We never compromise on the quality of our ingredients.</li>
+                <li>Integrity: We believe in honest and transparent business practices.</li>
+                <li>Customer Focus: Our customers are at the heart of everything we do.</li>
+                <li>Innovation: We constantly seek new ways to improve our service and menu.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
         <h1>Contact Us</h1>
-        <p>Get in touch with us for more information. We are here to help and answer any questions you may have. Reach out to us via email, phone, or visit our office.</p>
-        <p>Email: interactive@gmail.com</p>
-        <p>Phone: 1234567890</p>
-        <p>Address: 123 Main Street, Bangalore, India</p>
-    </div>
+        <p>Have questions or need assistance? Reach out to us!</p>
+        <p>Email: support@taste-tribe.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p>Address: 123 Food Street, Bangalore City, Foodland</p>
+    </section>
+
+    <section id="order" class="section order">
+        <h1>Order Now</h1>
+        <form class="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="menu-item">Select Item:</label>
+            <select id="menu-item" name="menu-item" required>
+                <option value="masala-dosa">Masala Dosa - $8.99</option>
+                <option value="chole-bhature">Chole Bhature - $10.99</option>
+                <option value="veg-biryani">Veg Biryani - $12.99</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Taste Tribe. All Rights Reserved.</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
